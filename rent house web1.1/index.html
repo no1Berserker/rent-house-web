@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>爱租哪</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/css.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CdDzGGo8N3GoTWnDTPquUIrQDXXC8tQz"></script>
+	<script src="js/js.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="head-contain">
+            <div class="logo"></div>
+            <div class="position">
+                <span>南京</span>
+                <span><a href="">&#xe6e1;</a></span>
+                <span><a href="">&#xe605;</a></span>
+                <div class="select"></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">爱租找房</a></li>
+                    <li><a href="">地图找房</a></li>
+                    <li><a href="">爱租金融</a></li>
+                </ul>
+            </div>
+            <div class="account">
+                <ul>
+                    <li>用户登录</li>
+                    <li>|</li>
+                    <li>公寓登陆</li>
+                    <li>|</li>
+                    <li>
+                        <span>&#xe601;</span>手机爱租
+                        <div class="code"></div>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="bd-nav">
+        <ul>
+            <li>您的当前位置</li>
+            <li>:</li>
+            <li>爱租哪</li>
+            <li>></li>
+            <li>个人中心</li>
+            <li>></li>
+            <li>发布房源</li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="content-left">
+            <ul>
+                <li class="con-tit">账户管理</li>
+                <li class="con-con t"><a href="">个人资料</a></li>
+                <li class="con-con"><a href="">修改密码</a></li>
+                <li class="con-con b"><a href="">手机修改</a></li>
+                <li class="con-tit">我的收藏</li>
+                <li class="con-con t"><a href="">收藏房源</a></li>
+                <li class="con-con b"><a href="">找房条件</a></li>
+                <li class="con-tit">我的发布</li>
+                <li class="con-con t"><a href="">发布房源</a></li>
+                <li class="con-con b"><a href="">已发布房源</a></li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <div class="content-right-navs">
+                <div class="content-right-nav h">基本信息</div>
+                <div class="content-right-nav">其他信息</div>
+                <div class="content-right-nav">个人信息</div>
+            </div>
+            <div class="content-contain">
+                <div class="content-name">
+                    <div class="info"><span>*</span>小区名称：</div>
+                    <div class="inp">
+                        <div class="inp-son">
+                            <input class="inp-name" type="text" placeholder="请输入小区名称">
+                        </div>
+                        <div class="inp-items">
+                            <div class="inp-item">弓箭</div>
+                            <div class="inp-item">弓箭坊</div>
+                            <div class="inp-item">弓箭坊小区</div>
+                            <div class="inp-item">弓箭坊40号</div>
+                            <div class="inp-item">欣才it学院</div>
+                            <div class="inp-item">欣才甘池软件</div>
+                            <div class="inp-item">沙县小吃</div>
+                            <div class="inp-item">升州路</div>
+                        </div>
+                    </div>
+                    <div class="sta"></div>
+                </div> 
+                <div class="find">地图找房</div>
+                <div class="map">
+                    <div id="allmap"></div>
+                </div>
+                <div class="content-block">
+                    <div class="info"><span>*</span>区属板块：</div>
+                    <div class="block">
+                        <div class="block-son">
+                            <select name="" id="block-01">
+                                <option value="">区属</option>
+                                <option value="">秦淮区</option>
+                                <option value="">白下区</option>
+                                <option value="">玄武区</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="block sec">
+                        <div class="block-son">
+                            <select name="" id="block-02">
+                                <option value="">板块</option>
+                                <option value="">人才大厦</option>
+                                <option value="">常发广场</option>
+                                <option value="">新城大厦</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sta"></div>
+                </div>
+                <div class="content-housetype">
+                    <div class="info"><span>*</span>户型：</div>
+                    <div class="housetype"><input type="text"></div>
+                    <div class="housetype-w">室</div>
+                    <div class="housetype"><input type="text"></div>
+                    <div class="housetype-w">厅</div>
+                    <div class="housetype"><input type="text"></div>
+                    <div class="housetype-w">卫</div>
+                    <div class="housetype"><input type="text"></div>
+                    <div class="housetype-w last">阳台</div>
+                    <div class="sta"></div>
+                </div>
+                <div class="content-format">
+                    <div class="info"><span>*</span>出租形式：</div>
+                    <div class="format">
+                        <div class="radio f">
+                            <input type="radio" name="type">
+                        </div>
+                        <div class="radio-w">整租</div>
+                        <div class="radio sec">
+                            <input type="radio" name="type">
+                        </div>
+                        <div class="radio-w">合租</div>
+                    </div>
+                    <div class="format-select">
+                        <div class="format-select-son">
+                            <select name="" id="bedroom">
+                                <option value="">选择卧室内容</option>
+                                <option value="">单人床</option>
+                                <option value="">双人床</option>
+                                <option value="">双人床+书桌</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="format-select sec">
+                        <div class="format-select-son">
+                            <select name="" id="limit">
+                                <option value="">选择限制条件</option>
+                                <option value="">禁止做饭</option>
+                                <option value="">禁止吸烟</option>
+                                <option value="">禁止大声喧哗</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sta"></div>
+                </div>
+                <div class="content-area">
+                    <div class="info"><span>*</span>面积：</div>
+                    <div class="inp">
+                        <div class="inp-son">
+                            <input type="text" class="area" placeholder="请输入面积">
+                        </div>
+                        <div class="unit">平方米</div>
+                    </div>
+                    <div class="sta"></div>
+                </div>
+                <div class="content-area">
+                    <div class="info"><span>*</span>租金：</div>
+                    <div class="inp">
+                        <div class="inp-son">
+                            <input type="text" class="rent" placeholder="请输入租金">
+                        </div>
+                        <div class="unit">元/每月</div>
+                    </div>
+                    <div class="sta"></div>
+                </div>
+                <div class="content-pay">
+                    <div class="info"><span>*</span>付款方式：</div>
+                    <div class="pay-way">
+                        <input class="choose" type="checkbox">
+                    </div>
+                    <div class="pay-way-w">月付</div>
+                    <div class="pay-way">
+                        <input class="choose" type="checkbox">
+                    </div>
+                    <div class="pay-way-w">季付</div>
+                    <div class="pay-way">
+                        <input class="choose" type="checkbox">
+                    </div>
+                    <div class="pay-way-w">半年付</div>
+                    <div class="pay-way">
+                        <input class="choose" type="checkbox">
+                    </div>
+                    <div class="pay-way-w">年付</div>
+                    <div class="pay-way">
+                        <input class="chooseAll" type="checkbox">
+                    </div>
+                    <div class="pay-way-w last">都可以</div>
+                </div>
+                <div class="content-moblie">
+                    <div class="info"><span>*</span>手机验证：</div>
+                    <div class="conform">
+                        <div class="enter"><input type="text" placeholder="输入手机号"></div> 
+                        <div class="sta"></div>   
+                    </div>
+                </div>
+                <div class="content-icon">
+                    <div class="info"><span>*</span>上传头像：</div>
+                    <div class="content-icon-img">
+                        +
+                    </div>
+                    <div class="content-icon-imgI">
+                        <img src="img/logo.png" width="100%" height="100%s">
+                    </div>
+                </div>
+                <div class="content-results">
+                    <div class="info">信息汇总：</div>
+                    <div class="information"></div>
+                </div>
+                <div class="content-submit">提交</div>
+                <div class="sta"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-contain">
+            <div class="footer-left">
+                <p>首页 | 爱租找房 | 地图找房 | 爱租金融 | 公司介绍<span>爱租哪 aizuna.house365.com</span></p>
+                <p>苏ICP证编号 B2-20110162 信息网络传播视听节目许可证 1009365 号</p>
+                <span class="icon"></span><p class="num">苏公网安备 32010502010010号</p>    
+            </div>
+            <div class="footer-right"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

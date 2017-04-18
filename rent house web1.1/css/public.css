@@ -1,0 +1,37 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html, body{
+	font-family: 微软雅黑, iconfont;
+	height: 100%;
+}
+
+ol, li{
+	list-style-type: none;
+}
+
+a, a:hover, a:visited{
+	text-decoration: none;
+}
+
+input{
+	height: 20px;
+	width: 100%;
+	border: none;
+	outline: none;
+    font-size: 13px;
+}
+
+select{
+    width: 100%;
+    font-size: 13px;
+    color: #999999;
+    border: none;
+    outline: none;
+}
+
+.clear{
+    clear: both;
+}
